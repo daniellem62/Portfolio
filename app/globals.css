@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    overflow: hidden;
+  }
+
   :root {
     /* Minimalistic Sudoku Theme - Neutral with subtle teal accent */
     --background: 0 0% 98%;
@@ -57,6 +61,15 @@
 
   body {
     @apply bg-background text-foreground;
+    height: 100vh;
+    overflow: hidden;
+  }
+}
+
+@layer components {
+  [class*="min-h-screen"] {
+    height: 100vh;
+    overflow: hidden;
   }
 }
 

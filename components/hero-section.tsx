@@ -1,47 +1,56 @@
-"use client"
+"use client";
 
-import { useEffect, useState } from "react"
-import Link from "next/link"
-import { FaGithub, FaLinkedin, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa"
-import { motion } from "framer-motion"
+import { useEffect, useState } from "react";
+import Link from "next/link";
+import {
+  FaGithub,
+  FaLinkedin,
+  FaEnvelope,
+  FaMapMarkerAlt,
+} from "react-icons/fa";
+import { motion } from "framer-motion";
 
 export function HeroSection() {
-  const [displayText, setDisplayText] = useState("")
-  const [index, setIndex] = useState(0)
-  const [isDeleting, setIsDeleting] = useState(false)
-  const [typingSpeed, setTypingSpeed] = useState(80)
-  const titles = ["Software Engineer", "Full-stack Developer", "Problem Solver"]
-  const [titleIndex, setTitleIndex] = useState(0)
+  const [displayText, setDisplayText] = useState("");
+  const [index, setIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [typingSpeed, setTypingSpeed] = useState(80);
+  const titles = [
+    "Software Engineer",
+    "Full-stack Developer",
+    "Problem Solver",
+  ];
+  const [titleIndex, setTitleIndex] = useState(0);
 
   useEffect(() => {
-    const currentTitle = titles[titleIndex]
+    const currentTitle = titles[titleIndex];
 
     const timer = setTimeout(
       () => {
         if (!isDeleting) {
-          setDisplayText(currentTitle.substring(0, index + 1))
-          setIndex(index + 1)
+          setDisplayText(currentTitle.substring(0, index + 1));
+          setIndex(index + 1);
 
           if (index >= currentTitle.length) {
-            setIsDeleting(true)
-            setTypingSpeed(150)
+            setIsDeleting(true);
+            setTypingSpeed(150);
           }
         } else {
-          setDisplayText(currentTitle.substring(0, index - 1))
-          setIndex(index - 1)
+          setDisplayText(currentTitle.substring(0, index - 1));
+          setIndex(index - 1);
 
           if (index <= 1) {
-            setIsDeleting(false)
-            setTitleIndex((prevIndex) => (prevIndex + 1) % titles.length)
-            setTypingSpeed(80)
+            setIsDeleting(false);
+            setTitleIndex((prevIndex) => (prevIndex + 1) % titles.length);
+            setTypingSpeed(80);
           }
         }
       },
       isDeleting ? typingSpeed / 2 : typingSpeed,
-    )
+    );
 
-    return () => clearTimeout(timer)
-  }, [index, isDeleting, titleIndex, titles, typingSpeed])
+    return () => clearTimeout(timer);
+  }, [index, isDeleting, titleIndex, titles, typingSpeed]);
 
   return (
     <div className="container mx-auto px-4 flex flex-col justify-center h-full">
@@ -65,7 +74,7 @@ export function HeroSection() {
 
           {/* Profile image on mobile */}
           <div className="flex-shrink-0 self-center md:hidden mt-4">
-            <div className="w-48 h-48 sm:w-64 sm:h-64 bg-gradient-to-br from-muted to-secondary rounded-lg overflow-hidden shadow-sm border border-border">
+            <div className="w-48 h-48 sm:w-64 sm:h-64 bg-gradient-to-br from-muted to-secondary rounded-full overflow-hidden shadow-sm border border-border">
               <img
                 src="/images/design-mode/1732914956224.jpg"
                 alt="Danielle"
@@ -80,14 +89,15 @@ export function HeroSection() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-base sm:text-lg text-muted-foreground max-w-2xl leading-relaxed"
           >
-            A passionate software engineer with a sharp analytical mindset. I thrive on solving complex problems,
-            learning new technologies rapidly, and making meaningful contributions from the start.
+            A passionate software engineer with a sharp analytical mindset. I
+            thrive on solving complex problems, learning new technologies
+            rapidly, and making meaningful contributions from the start.
           </motion.p>
         </div>
 
         {/* Profile image on desktop */}
         <div className="flex-shrink-0 self-center hidden md:block">
-          <div className="w-72 h-72 bg-gradient-to-br from-muted to-secondary rounded-lg overflow-hidden shadow-md border border-border">
+          <div className="w-72 h-72 bg-gradient-to-br from-muted to-secondary rounded-full overflow-hidden shadow-md border border-border">
             <img
               src="/images/design-mode/1732914956224.jpg"
               alt="Danielle"
@@ -123,13 +133,17 @@ export function HeroSection() {
         </Link>
         <div className="flex items-center gap-3">
           <FaEnvelope className="text-lg text-accent" />
-          <span className="text-sm text-muted-foreground">danielle.m62@outlook.com</span>
+          <span className="text-sm text-muted-foreground">
+            danielle.m62@outlook.com
+          </span>
         </div>
         <div className="flex items-center gap-3">
           <FaMapMarkerAlt className="text-lg text-accent" />
-          <span className="text-sm text-muted-foreground">West Yorkshire, UK</span>
+          <span className="text-sm text-muted-foreground">
+            West Yorkshire, UK
+          </span>
         </div>
       </motion.div>
     </div>
-  )
+  );
 }
