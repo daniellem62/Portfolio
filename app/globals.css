@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Minimalistic Sudoku Theme - Neutral with subtle teal accent */
+    --background: 0 0% 98%;
+    --foreground: 0 0% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 15%;
+    --primary: 180 60% 45%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 90%;
+    --secondary-foreground: 0 0% 15%;
+    --muted: 0 0% 85%;
+    --muted-foreground: 0 0% 45%;
+    --accent: 180 60% 45%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 180 60% 45%;
+    --radius: 0.375rem;
+    --purple-light: 270 70% 85%;
+    --purple: 270 70% 50%;
+    --purple-dark: 270 70% 30%;
+  }
+
+  .dark {
+    --background: 0 0% 10%;
+    --foreground: 0 0% 95%;
+    --card: 0 0% 13%;
+    --card-foreground: 0 0% 95%;
+    --popover: 0 0% 13%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 180 60% 50%;
+    --primary-foreground: 0 0% 10%;
+    --secondary: 0 0% 20%;
+    --secondary-foreground: 0 0% 95%;
+    --muted: 0 0% 25%;
+    --muted-foreground: 0 0% 70%;
+    --accent: 180 60% 50%;
+    --accent-foreground: 0 0% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 180 60% 50%;
+    --purple-light: 260 50% 70%;
+    --purple: 260 50% 50%;
+    --purple-dark: 260 50% 30%;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Updated colors to minimalistic neutral with teal accents */
+
+/* Hide v0 badge on deployed site */
+#v0-built-with-button-e660be8b-a71f-49ca-91d7-88e19cd60161 {
+  display: none !important;
+}
+
+/* All your scrollbars, gradients, animations, expanded card styling remain unchanged */

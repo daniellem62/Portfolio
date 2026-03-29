@@ -1,0 +1,152 @@
+.flip-card {
+  perspective: 1000px;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  /*  background-color: transparent; /* Ensure the container is transparent */
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  /* Ensure the inner container is transparent */
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  transform-style: preserve-3d;
+  transition: all 0.3s ease;
+}
+
+.flip-card-front {
+  z-index: 2;
+  background-size: 200% 200%;
+  animation: gradient-shift 5s ease infinite;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(124, 58, 237, 0.5) rgba(255, 255, 255, 0.1);
+}
+
+/* Light mode gradient backgrounds - adjusted to be more true purple */
+.light .flip-card-front {
+  background: linear-gradient(to bottom right, #a78bfa, #8b5cf6);
+}
+
+.light .flip-card-back {
+  background: linear-gradient(to bottom right, #a78bfa, #8b5cf6);
+}
+
+/* Dark mode gradient backgrounds remain the same */
+.dark .flip-card-front {
+  background: linear-gradient(to bottom right, rgba(17, 24, 39), rgba(46, 16, 101));
+}
+
+.dark .flip-card-back {
+  background: linear-gradient(to bottom right, rgba(17, 24, 39), rgba(46, 16, 101));
+}
+
+.flip-card-back::-webkit-scrollbar {
+  width: 4px;
+}
+
+.flip-card-back::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.flip-card-back::-webkit-scrollbar-thumb {
+  background-color: rgba(124, 58, 237, 0.5);
+  border-radius: 10px;
+}
+
+/* Light mode adjustments */
+.light .flip-card-front {
+  box-shadow: 0 4px 15px -1px rgba(124, 58, 237, 0.2), 0 2px 8px -1px rgba(45, 212, 191, 0.15);
+}
+
+.light .flip-card-back {
+  box-shadow: 0 4px 15px -1px rgba(124, 58, 237, 0.2), 0 2px 8px -1px rgba(45, 212, 191, 0.15);
+  scrollbar-color: rgba(124, 58, 237, 0.5) rgba(0, 0, 0, 0.05);
+}
+
+.light .flip-card-back::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.light .flip-card-back::-webkit-scrollbar-thumb {
+  background-color: rgba(124, 58, 237, 0.5);
+}
+
+/* Gradient animation */
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .flip-card {
+    margin-bottom: 1rem;
+  }
+}
+
+@keyframes scroll-loop {
+  0% {
+    transform: translateX(0); /* Start at the left */
+  }
+  100% {
+    transform: translateX(-100%); /* Scroll to the left, hiding the first set */
+  }
+}
+
+.animate-scroll-loop {
+  display: flex;
+  width: 200%; /* Ensures both sets of icons fit together */
+  animation: scroll-loop 30s linear infinite; /* 30s for smooth scrolling */
+}
+
+@media (max-width: 640px) {
+  /* Adjust for smaller screens if needed */
+  .animate-scroll-loop {
+    animation-duration: 20s; /* Faster scrolling for smaller screens */
+  }
+
+  .flip-card-front,
+  .flip-card-back {
+    padding: 0.5rem;
+  }
+
+  .flip-card-back::-webkit-scrollbar {
+    width: 2px;
+  }
+
+  .flip-card-back {
+    font-size: 0.75rem;
+  }
+}
