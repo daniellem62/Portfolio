@@ -14,8 +14,7 @@ export const projects = [
     title: "SnapStem",
     status: "In Progress",
     date: "Feb 2025",
-    image:
-      "https://media.licdn.com/dms/image/v2/D5622AQGMlpY0xgg4dQ/feedshare-shrink_2048_1536/B56ZVN1x44GUAs-/0/1740767699575?e=1744848000&v=beta&t=c9HOLJT6eaTK6q6lS3__7T0kQcrT6LRBVJ8eHznsUfY",
+    image: "/images/design-mode/Snapstem.png",
     description:
       "A plant identification and care information app using Pinecone DB for efficient vector storage and search, alongside OpenAI for identifying plants from user-uploaded photos and providing detailed care information with the added PlantPal chatbot feature.",
     techStack: ["TypeScript", "React", "Next.js", "Pinecone", "Open AI"],
@@ -26,7 +25,7 @@ export const projects = [
     title: "Real-Time Chat App",
     status: "In Progress",
     date: "March 2025",
-    image: "https://media.licdn.com/dms/image/v2/D5622AQH5EjlmBQrETw/feedshare-shrink_2048_1536/B56ZW0qrVeGUAs-/0/1742492842088?e=1745452800&v=beta&t=tIDbhD69RGMnPe5Mrc6YoluCO6WpOHB62m3MwG_5FA4",
+    image: "/images/design-mode/chatapp.png",
     description:
       "A real-time chat app using Socket.io, allowing users to join with a custom username and send/receive messages in real time. The app uses AWS EC2 for server hosting and is designed for practicing web sockets and AWS integration.",
     techStack: ["React", "Socket.io", "Next.js", "AWS EC2", "TypeScript"],
@@ -37,7 +36,8 @@ export const projects = [
     title: "Flashcards App",
     status: "Maintained",
     date: "Jan 2025",
-    image: "https://github.com/daniellem62/flashcards-hackathon/blob/main/images/Screenshot.png?raw=true",
+    image:
+      "https://github.com/daniellem62/flashcards-hackathon/blob/main/images/Screenshot.png?raw=true",
     description:
       "Developed a Flashcards App in a two-day hackathon to enhance interactive learning with React frontend and Node.js backend.",
     techStack: ["React", "Vite", "Node.js", "Express"],
@@ -48,7 +48,8 @@ export const projects = [
     title: "Plant App",
     status: "In Progress",
     date: "Jan 2025",
-    image: "https://github.com/daniellem62/PlantApp/raw/main/public/preview.png",
+    image:
+      "https://github.com/daniellem62/PlantApp/raw/main/public/preview.png",
     description:
       "Developed a plant care app with hardcoded plant data, allowing users to search and filter plants by various criteria.",
     techStack: ["React", "Vite", "Node.js"],
@@ -59,8 +60,10 @@ export const projects = [
     title: "RESTful API",
     status: "Completed",
     date: "Nov 2024",
-    image: "https://th.bing.com/th/id/OIP.KG61Dv1ZffWQ9jGLV8-sDgHaEK?rs=1&pid=ImgDetMain",
-    description: "Developed a back-end REST API for managing cocktail recipes with full CRUD operations.",
+    image:
+      "https://th.bing.com/th/id/OIP.KG61Dv1ZffWQ9jGLV8-sDgHaEK?rs=1&pid=ImgDetMain",
+    description:
+      "Developed a back-end REST API for managing cocktail recipes with full CRUD operations.",
     techStack: ["JavaScript", "Node.js", "Postman"],
     link: "https://github.com/daniellem62/rest-api-cocktails",
     category: "Back-end",
@@ -69,11 +72,18 @@ export const projects = [
     title: "DevOps Hackathon",
     status: "Completed",
     date: "Jan 2025",
-    image:
-      "https://media.licdn.com/dms/image/v2/D5622AQF5FhyqYn51VQ/feedshare-shrink_2048_1536/B56ZUFXt8PGQAo-/0/1739551859016?e=1744848000&v=beta&t=4wnxZOMuVewKgB01G4IUuBNGtjYUkx3sY-NcxsXaFts",
+    image: "/images/design-mode/devops.png",
     description:
       "Built a Blackjack game using v0, focusing on DevOps practices with CI/CD, containerization, and error tracking.",
-    techStack: ["v0", "React", "Next.js", "Docker", "Github Actions", "Sentry", "Vercel"],
+    techStack: [
+      "v0",
+      "React",
+      "Next.js",
+      "Docker",
+      "Github Actions",
+      "Sentry",
+      "Vercel",
+    ],
     link: "https://github.com/daniellem62/devops-project",
     category: "Dev-Ops",
   },
@@ -103,7 +113,8 @@ export const projects = [
     title: "Movies Database API",
     status: "Completed",
     date: "Jan 2025",
-    image: "https://th.bing.com/th/id/OIP.KG61Dv1ZffWQ9jGLV8-sDgHaEK?rs=1&pid=ImgDetMain",
+    image:
+      "https://th.bing.com/th/id/OIP.KG61Dv1ZffWQ9jGLV8-sDgHaEK?rs=1&pid=ImgDetMain",
     description:
       "A RESTful API for managing a postgreSQL movie database. This API allows users to perform CRUD operations on movies, directors, and accolades (including Oscars, BAFTAs, and revenue).",
     techStack: ["Node.js", "Express", "PostgreSQL"],
@@ -121,4 +132,4 @@ export const projects = [
     link: "https://github.com/daniellem62/CodingChallenge",
     category: "Back-end",
   },
-]
+];
