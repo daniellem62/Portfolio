@@ -1,0 +1,41 @@
+/* Scroll snap container */
+.scroll-container {
+  scroll-snap-type: y proximity;
+  overflow-y: auto;
+  height: 100vh;
+  scroll-behavior: smooth;
+}
+
+/* Scroll snap sections */
+.scroll-section {
+  scroll-snap-align: start;
+  min-height: 100vh;
+  position: relative;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+/* Sticky section headers */
+.section-header {
+  position: sticky;
+  top: 6rem;
+  z-index: 10;
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.9) 0%,
+    rgba(255, 255, 255, 0.8) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+/* Dark mode sticky headers */
+.dark .section-header {
+  background: linear-gradient(to bottom, rgba(3, 7, 18, 0.9) 0%, rgba(3, 7, 18, 0.8) 50%, rgba(3, 7, 18, 0) 100%);
+}
+
+/* Add some space for the fixed header */
+html {
+  scroll-padding-top: 5rem;
+}
