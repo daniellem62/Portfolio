@@ -113,35 +113,14 @@ export function HeroSection() {
         transition={{ duration: 0.5, delay: 0.4 }}
         className="flex flex-wrap gap-8 mt-10 sm:mt-12"
       >
-        <Link
-          href="https://github.com/daniellem62"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-3 text-muted-foreground hover:text-accent transition-colors duration-300"
-        >
-          <FaGithub className="text-lg" />
-          <span className="text-sm font-medium">GitHub</span>
-        </Link>
-        <Link
-          href="https://www.linkedin.com/in/danielle-mcloughlin-688796338/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-3 text-muted-foreground hover:text-accent transition-colors duration-300"
-        >
-          <FaLinkedin className="text-lg" />
-          <span className="text-sm font-medium">LinkedIn</span>
-        </Link>
         <div className="flex items-center gap-3">
-          <FaEnvelope className="text-lg text-accent" />
-          <span className="text-sm text-muted-foreground">
-            danielle.m62@outlook.com
-          </span>
-        </div>
-        <div className="flex items-center gap-3">
-          <FaMapMarkerAlt className="text-lg text-accent" />
-          <span className="text-sm text-muted-foreground">
-            West Yorkshire, UK
-          </span>
+          <a
+            href="/Danielle_CV.pdf"
+            download
+            className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-5 py-2.5 rounded-xl font-medium shadow-md hover:scale-105 hover:shadow-lg transition-all duration-200"
+          >
+            Download CV
+          </a>
         </div>
       </motion.div>
     </div>
