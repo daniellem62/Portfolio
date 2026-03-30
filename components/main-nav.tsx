@@ -1,23 +1,32 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { Home, User, FileText, Code, Briefcase, Mail, Github, Linkedin, Twitter } from "lucide-react"
+import Link from "next/link";
+import {
+  Home,
+  User,
+  FileText,
+  Code,
+  Briefcase,
+  Mail,
+  Github,
+  Linkedin,
+  Twitter,
+} from "lucide-react";
 
 const navLinks = [
-  { href: "#home", label: "Home", icon: Home },
-  { href: "#about", label: "About", icon: User },
-  { href: "#skills", label: "Skills", icon: Code },
-  { href: "#projects", label: "Projects", icon: FileText },
-  { href: "#experience", label: "Experience", icon: Briefcase },
- 
-]
+  { href: "/", label: "Home", icon: Home },
+  { href: "/#about", label: "About", icon: User },
+  { href: "/#skills", label: "Skills", icon: Code },
+  { href: "/#projects", label: "Projects", icon: FileText },
+  { href: "/#experience", label: "Experience", icon: Briefcase },
+  { href: "/#activities", label: "Interests & Learning", icon: User },
+];
 
 const socialLinks = [
   { href: "https://github.com", icon: Github, label: "GitHub" },
   { href: "https://linkedin.com", icon: Linkedin, label: "LinkedIn" },
-  { href: "https://twitter.com", icon: Twitter, label: "Twitter" },
   { href: "mailto:danielle.m62@outlook.com", icon: Mail, label: "Email" },
-]
+];
 
 export function MainNav() {
   return (
@@ -71,5 +80,5 @@ export function MainNav() {
         <p>&copy; {new Date().getFullYear()} Danielle Mcloughlin</p>
       </div>
     </aside>
-  )
+  );
 }
