@@ -22,7 +22,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground transition-colors duration-300 relative lg:ml-64">
       <MainNav />
-      <main className="fullpage-container">
+      <main className="fullpage-container pt-16 lg:pt-0">
         <section id="home" className="fullpage-section">
           <div className="section-content">
             <HeroSection />

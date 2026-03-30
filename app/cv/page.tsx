@@ -1,10 +1,10 @@
 export default function CVPage() {
   return (
-    <div className="h-screen w-screen overflow-hidden lg:ml-64">
+    <div className="h-screen w-screen overflow-hidden lg:ml-64 flex flex-col pt-16 lg:pt-0">
       <object
         data="/Danielle_CV.pdf"
         type="application/pdf"
-        className="w-full h-full"
+        className="w-full flex-1"
         aria-label="Danielle Mcloughlin's CV"
       >
         <div className="flex flex-col items-center justify-center h-full p-8 text-center">
