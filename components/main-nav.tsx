@@ -25,8 +25,8 @@ const navLinks = [
 ];
 
 const socialLinks = [
-  { href: "https://github.com", icon: Github, label: "GitHub" },
-  { href: "https://linkedin.com", icon: Linkedin, label: "LinkedIn" },
+  { href: "https://github.com/daniellem62", icon: Github, label: "GitHub" },
+  { href: "https://www.linkedin.com/in/danielle-mcloughlin-688796338", icon: Linkedin, label: "LinkedIn" },
   { href: "mailto:danielle.m62@outlook.com", icon: Mail, label: "Email" },
 ];
 

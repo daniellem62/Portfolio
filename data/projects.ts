@@ -6,7 +6,7 @@ export const projects = [
     image: "https://i.ibb.co/G3PXYWVW/Screenshot-2025-03-07-101148.png",
     description:
       "Shelf Life is a web application designed to help users track the expiration dates of their groceries, reduce food waste, and optimize meal planning. With AI-powered recipe suggestions, users can make the most of ingredients before they expire, ensuring smarter storage habits and more sustainable kitchen management.",
-    techStack: ["TypeScript", "React", "Next.js", "Supabase", "OpenAI"],
+    techStack: ["OpenAI", "Supabase", "TypeScript", "React", "Next.js"],
     link: "https://github.com/BC18-Shelf-Life/Shelf-Life",
     category: "Full-stack",
   },
@@ -17,7 +17,7 @@ export const projects = [
     image: "/images/design-mode/Snapstem.png",
     description:
       "A plant identification and care information app using Pinecone DB for efficient vector storage and search, alongside OpenAI for identifying plants from user-uploaded photos and providing detailed care information with the added PlantPal chatbot feature.",
-    techStack: ["TypeScript", "React", "Next.js", "Pinecone", "Open AI"],
+    techStack: ["Pinecone", "Open AI", "TypeScript", "React", "Next.js"],
     link: "https://github.com/daniellem62/SnapStem",
     category: "Full-stack",
   },
@@ -28,7 +28,7 @@ export const projects = [
     image: "/images/design-mode/chatapp.png",
     description:
       "A real-time chat app using Socket.io, allowing users to join with a custom username and send/receive messages in real time. The app uses AWS EC2 for server hosting and is designed for practicing web sockets and AWS integration.",
-    techStack: ["React", "Socket.io", "Next.js", "AWS EC2", "TypeScript"],
+    techStack: ["React", "Socket.io", "AWS EC2", "Next.js", "TypeScript"],
     link: "https://github.com/daniellem62/ChatApp",
     category: "Full-stack",
   },
