@@ -4,7 +4,7 @@ import { FaRegCopyright } from "react-icons/fa6";
 
 export default function ProjectsPage() {
   return (
-    <div className="min-h-screen bg-purple-50/30 dark:bg-transparent text-gray-900 dark:text-white transition-colors duration-300 relative overflow-y-auto">
+    <div className="min-h-screen bg-purple-50/30 dark:bg-transparent text-gray-900 dark:text-white transition-colors duration-300 relative overflow-y-auto lg:ml-64">
       <MainNav />
       <main className="container mx-auto px-4 py-16 relative z-10">
         <h1 className="text-4xl font-bold text-purple-800 dark:text-white mb-8">

@@ -94,17 +94,6 @@ export function HeroSection() {
             rapidly, and making meaningful contributions from the start.
           </motion.p>
         </div>
-
-        {/* Profile image on desktop */}
-        <div className="flex-shrink-0 self-center hidden md:block">
-          <div className="w-72 h-72 bg-gradient-to-br from-muted to-secondary rounded-full overflow-hidden shadow-md border border-border">
-            <img
-              src="/images/design-mode/1732914956224.jpg"
-              alt="Danielle"
-              className="w-full h-full object-cover"
-            />
-          </div>
-        </div>
       </div>
 
       <motion.div

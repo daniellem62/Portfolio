@@ -32,12 +32,14 @@ export function MainNav() {
   return (
     <aside className="fixed left-0 top-0 z-50 hidden h-screen w-64 flex-col bg-[#1a1a2e] lg:flex">
       {/* Profile Section */}
-      <div className="flex flex-col items-center px-6 pt-8 pb-6">
-        <div className="relative mb-4">
-          <div className="h-28 w-28 rounded-full bg-gradient-to-br from-emerald-400 to-cyan-400 p-1">
-            <div className="flex h-full w-full items-center justify-center rounded-full bg-[#1a1a2e] text-3xl font-bold text-foreground">
-              DM
-            </div>
+      <div className="flex flex-col items-center px-4 pt-6 pb-8">
+        <div className="relative">
+          <div className="h-48 w-48 rounded-full bg-gradient-to-br from-emerald-400 to-cyan-400 p-0.5">
+            <img
+              src="/images/design-mode/1732914956224.jpg"
+              alt="Danielle"
+              className="h-full w-full rounded-full object-cover"
+            />
           </div>
         </div>
 
