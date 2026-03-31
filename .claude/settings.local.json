@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -r \"^\\\\s*//\" /c/Users/danie/repos/newPortfolio/Portfolio/app /c/Users/danie/repos/newPortfolio/Portfolio/components /c/Users/danie/repos/newPortfolio/Portfolio/lib --include=\"*.tsx\" --include=\"*.ts\")"
+    ]
+  }
+}

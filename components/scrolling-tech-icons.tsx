@@ -24,11 +24,7 @@ import {
   SiTestinglibrary,
   SiHtml5,
   SiCss3,
-  SiMongodb,
-  SiFirebase,
-  SiRedux,
   SiStorybook,
-  SiSass,
 } from "react-icons/si"
 import { FaAws } from "react-icons/fa";
 
