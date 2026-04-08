@@ -18,6 +18,9 @@ export function HeroSection() {
     "Software Engineer",
     "Full-stack Developer",
     "Problem Solver",
+    "Logic Puzzle Enthusiast",
+    "Pattern Recogniser",
+    "Lifelong Tinkerer"
   ];
   const [titleIndex, setTitleIndex] = useState(0);
 
@@ -88,9 +91,9 @@ export function HeroSection() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-base sm:text-lg text-muted-foreground max-w-2xl leading-relaxed"
           >
-            A passionate software engineer with a sharp analytical mindset. I
-            thrive on solving complex problems, learning new technologies
-            rapidly, and making meaningful contributions from the start.
+            From telescopes and Unreal Tournament, through animal care and parenthood, 
+            to pull requests and production. 
+            I found my way back to tech, and I'm not leaving.
           </motion.p>
         </div>
       </div>
@@ -105,7 +108,7 @@ export function HeroSection() {
           <a
             href="/Danielle_CV.pdf"
             download
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-5 py-2.5 rounded-xl font-medium shadow-md hover:scale-105 hover:shadow-lg transition-all duration-200"
+            className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-700 to-gray-800 text-white px-5 py-2.5 rounded-xl font-medium shadow-md hover:scale-105 hover:shadow-lg transition-all duration-200"
           >
             Download CV
           </a>

@@ -18,7 +18,9 @@ export function AboutSection() {
   Challenges became puzzles, projects became chances to explore and innovate. The logical thinking, creative problem-solving, and collaborative spirit of tech resonated with me. School of Code didn’t just teach me to code  it reconnected me with the STEM enthusiast I’d always been.
 </p>
 <p className="text-sm sm:text-lg text-gray-700 dark:text-gray-400 leading-relaxed">
-  Today, I’m proud to be a woman in tech, bringing adaptability, curiosity, and a unique perspective shaped by life experience, the patience of a parent, empathy from caring for animals, and the excitement of finding my way back to STEM.
+  Today, I’m proud to be a woman in tech - building things that matter and bringing a perspective shaped by a life lived before the keyboard. I'm looking for a team where curiosity is valued, growth is expected, and the problems are worth solving.
+
+
 </p>
 
       </div>
