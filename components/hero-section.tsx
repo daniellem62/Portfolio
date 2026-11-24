@@ -1,119 +1,47 @@
-"use client";
-
-import { useEffect, useState } from "react";
 import Link from "next/link";
-import {
-  FaLinkedin,
-  FaEnvelope,
-  FaMapMarkerAlt,
-} from "react-icons/fa";
-import { motion } from "framer-motion";
+import Image from "next/image";
 
 export function HeroSection() {
-  const [displayText, setDisplayText] = useState("");
-  const [index, setIndex] = useState(0);
-  const [isDeleting, setIsDeleting] = useState(false);
-  const [typingSpeed, setTypingSpeed] = useState(80);
-  const titles = [
-    "Software Engineer",
-    "Full-stack Developer",
-    "Problem Solver",
-    "Logic Puzzle Enthusiast",
-    "Pattern Recogniser",
-    "Lifelong Tinkerer"
-  ];
-  const [titleIndex, setTitleIndex] = useState(0);
-
-  useEffect(() => {
-    const currentTitle = titles[titleIndex];
-
-    const timer = setTimeout(
-      () => {
-        if (!isDeleting) {
-          setDisplayText(currentTitle.substring(0, index + 1));
-          setIndex(index + 1);
-
-          if (index >= currentTitle.length) {
-            setIsDeleting(true);
-            setTypingSpeed(150);
-          }
-        } else {
-          setDisplayText(currentTitle.substring(0, index - 1));
-          setIndex(index - 1);
-
-          if (index <= 1) {
-            setIsDeleting(false);
-            setTitleIndex((prevIndex) => (prevIndex + 1) % titles.length);
-            setTypingSpeed(80);
-          }
-        }
-      },
-      isDeleting ? typingSpeed / 2 : typingSpeed,
-    );
-
-    return () => clearTimeout(timer);
-  }, [index, isDeleting, titleIndex, titles, typingSpeed]);
-
   return (
-    <div className="container mx-auto px-4 flex flex-col justify-center h-full">
-      <div className="flex flex-col md:flex-row md:items-center md:justify-between md:gap-12">
-        <div className="flex flex-col space-y-6 md:space-y-8">
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-foreground tracking-tight"
-          >
-            Danielle Mcloughlin
-          </motion.h1>
-
-          <div className="h-12 sm:h-16 relative">
-            <p className="text-accent font-medium text-xl sm:text-2xl md:text-3xl tracking-wide">
-              {displayText}
-              <span className="animate-pulse ml-1">_</span>
-            </p>
+    <section id="home" aria-labelledby="hero-heading" className="hero-section">
+      <div className="portfolio-container hero-layout">
+        <div>
+          <p className="eyebrow">A curious mind, finding its way back</p>
+          <h1 id="hero-heading" className="hero-title">
+            Software engineer.
+            <br />
+            <em>Curious by nature.</em>
+          </h1>
+          <p className="hero-lede">
+            From telescopes and Unreal Tournament, through animal care and
+            parenthood, to pull requests and production. I found my way back to
+            tech, and I&apos;m not leaving.
+          </p>
+          <p className="hero-focus">
+            I&apos;m Danielle. I enjoy getting to the heart of how things work,
+            especially in backend development, software architecture, DevOps,
+            and cloud infrastructure.
+          </p>
+          <div className="hero-actions">
+            <a href="/Danielle_CV.pdf" download className="text-link">
+              Download my CV <span aria-hidden="true">↓</span>
+            </a>
+            <Link href="#contact" className="text-link">
+              Get in touch <span aria-hidden="true">↗</span>
+            </Link>
           </div>
-
-          {/* Profile image on mobile */}
-          <div className="flex-shrink-0 self-center md:hidden mt-4">
-            <div className="w-48 h-48 sm:w-64 sm:h-64 bg-gradient-to-br from-muted to-secondary rounded-full overflow-hidden shadow-sm border border-border">
-              <img
-                src="/images/design-mode/1732914956224.jpg"
-                alt="Danielle"
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </div>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-base sm:text-lg text-muted-foreground max-w-2xl leading-relaxed"
-          >
-            From telescopes and Unreal Tournament, through animal care and parenthood, 
-            to pull requests and production. 
-            I found my way back to tech, and I'm not leaving.
-          </motion.p>
         </div>
+
+        <Image
+          src="/images/danielle.jpg"
+          alt="Danielle"
+          width={453}
+          height={566}
+          priority
+          sizes="(max-width: 520px) 72vw, (max-width: 760px) 40vw, 336px"
+          className="hero-portrait"
+        />
       </div>
-
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.4 }}
-        className="flex flex-wrap gap-8 mt-10 sm:mt-12"
-      >
-        <div className="flex items-center gap-3">
-          <a
-            href="/Danielle_CV.pdf"
-            download
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-700 to-gray-800 text-white px-5 py-2.5 rounded-xl font-medium shadow-md hover:scale-105 hover:shadow-lg transition-all duration-200"
-          >
-            Download CV
-          </a>
-        </div>
-      </motion.div>
-    </div>
+    </section>
   );
 }

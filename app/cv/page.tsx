@@ -1,23 +1,34 @@
+import Link from "next/link";
+import { MainNav } from "@/components/main-nav";
+
 export default function CVPage() {
   return (
-    <div className="h-screen w-screen overflow-hidden lg:ml-64 flex flex-col pt-16 lg:pt-0">
-      <object
-        data="/Danielle_CV.pdf"
-        type="application/pdf"
-        className="w-full flex-1"
-        aria-label="Danielle Mcloughlin's CV"
-      >
-        <div className="flex flex-col items-center justify-center h-full p-8 text-center">
-          <p className="mb-4">Your browser doesn't support embedded PDFs.</p>
-          <a
-            href="/Danielle_CV.pdf"
-            download
-            className="px-4 py-2 bg-purple-600 text-white rounded-md hover:bg-purple-700 transition-colors"
-          >
-            Download CV
+    <>
+      <MainNav />
+      <main className="portfolio-container py-8">
+        <div className="mb-5 flex flex-wrap items-center justify-between gap-4">
+          <Link href="/#home" className="text-link">
+            Back to the portfolio
+          </Link>
+          <a href="/Danielle_CV.pdf" download className="text-link">
+            Download CV <span aria-hidden="true">↓</span>
           </a>
         </div>
-      </object>
-    </div>
+        <object
+          data="/Danielle_CV.pdf"
+          type="application/pdf"
+          className="h-[75vh] w-full border border-border"
+          aria-label="Danielle Mcloughlin's CV"
+        >
+          <p>
+            Your browser doesn&apos;t support embedded PDFs.{" "}
+            <a href="/Danielle_CV.pdf" download className="text-link">
+              Download the CV
+            </a>
+            .
+          </p>
+        </object>
+      </main>
+    </>
   );
 }

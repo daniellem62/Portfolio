@@ -6,7 +6,7 @@ test('test', async ({ page }) => {
 });
 
 test("all images load successfully (with debug info)", async ({ page }) => {
-  await page.goto("https://www.codewithdani.com/");
+  await page.goto("http://localhost:3000/");
 
   const images = page.locator('img');
   const count = await images.count();
@@ -25,7 +25,7 @@ test("all images load successfully (with debug info)", async ({ page }) => {
 
     // Check it actually loaded
     const isLoaded = await img.evaluate(
-      (el) => el.complete && el.naturalWidth > 0
+      (el) => (el as HTMLImageElement).complete && (el as HTMLImageElement).naturalWidth > 0
     );
 
     expect(

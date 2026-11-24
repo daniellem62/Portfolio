@@ -1,18 +1,30 @@
 import type React from "react"
+import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import { ThemeProvider } from "@/components/theme-provider"
-import "@/styles/carousel.css"
 import "./globals.css"
-import "@/styles/flip-card.css"
-import "@/styles/fullpage-scroll.css"
 import { Analytics } from "@vercel/analytics/react"
 
 const inter = Inter({ subsets: ["latin"] })
 
-export const metadata = {
-  title: "Danielle Mcloughlin Portfolio",
-  description: "Software Engineer Portfolio",
-    generator: 'v0.app'
+export const metadata: Metadata = {
+  metadataBase: new URL("https://codewithdani.com"),
+  title: "Danielle Mcloughlin — Software Engineer",
+  description:
+    "I’m Danielle, a software engineer who found her way back to tech through curiosity, problem-solving, and a love of understanding how things work.",
+  openGraph: {
+    title: "Danielle Mcloughlin — Software Engineer",
+    description:
+      "A personal portfolio about software, problem-solving, and the long way back to tech.",
+    url: "https://codewithdani.com",
+    siteName: "Danielle Mcloughlin",
+    locale: "en_GB",
+    type: "website",
+  },
+  icons: {
+    icon: [{ url: "/dmfavicon.svg", type: "image/svg+xml" }],
+    apple: "/dmfavicon-apple.png",
+  },
 }
 
 export default function RootLayout({
@@ -22,12 +34,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
-        <link rel="icon" href="https://i.ibb.co/cK0VCx2p/favicon-16x16.png" />
-      </head>
-
       <body className={inter.className}>
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
           {children}
           <Analytics />
         </ThemeProvider>
