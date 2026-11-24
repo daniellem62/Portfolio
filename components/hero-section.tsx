@@ -23,7 +23,7 @@ export function HeroSection() {
             and cloud infrastructure.
           </p>
           <div className="hero-actions">
-            <a href="/Danielle_CV.pdf" download className="text-link">
+            <a href="/Danielle_CV_updated.pdf" download className="text-link">
               Download my CV <span aria-hidden="true">↓</span>
             </a>
             <Link href="#contact" className="text-link">

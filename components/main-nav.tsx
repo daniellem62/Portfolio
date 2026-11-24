@@ -27,7 +27,7 @@ export function MainNav() {
         </nav>
 
         <div className="header-actions">
-          <Link href="/Danielle_CV.pdf" download>
+          <Link href="/Danielle_CV_updated.pdf" download>
             CV <span aria-hidden="true">↓</span>
           </Link>
         </div>
@@ -42,7 +42,7 @@ export function MainNav() {
                 </li>
               ))}
               <li>
-                <Link href="/Danielle_CV.pdf" download>
+                <Link href="/Danielle_CV_updated.pdf" download>
                   Download CV
                 </Link>
               </li>
