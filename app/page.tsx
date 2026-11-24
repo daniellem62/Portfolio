@@ -17,7 +17,7 @@ const socialLinks = [
   },
   {
     label: "Email",
-    href: "mailto:danielle.m62@outlook.com",
+    href: "mailto:dani@codewithdani.com",
   },
 ];
 
@@ -51,7 +51,9 @@ export default function Home() {
                 <a
                   key={link.label}
                   href={link.href}
-                  target={link.href.startsWith("mailto:") ? undefined : "_blank"}
+                  target={
+                    link.href.startsWith("mailto:") ? undefined : "_blank"
+                  }
                   rel={
                     link.href.startsWith("mailto:")
                       ? undefined
@@ -65,7 +67,7 @@ export default function Home() {
                   )}
                 </a>
               ))}
-              <a href="/Danielle_CV.pdf" download className="text-link">
+              <a href="/Danielle_CV_updated.pdf" download className="text-link">
                 CV <span aria-hidden="true">↓</span>
               </a>
             </nav>

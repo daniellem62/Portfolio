@@ -10,7 +10,7 @@ export default function CVPage() {
           <Link href="/#home" className="text-link">
             Back to the portfolio
           </Link>
-          <a href="/Danielle_CV.pdf" download className="text-link">
+          <a href="/Danielle_CV_updated.pdf" download className="text-link">
             Download CV <span aria-hidden="true">↓</span>
           </a>
         </div>
@@ -22,7 +22,7 @@ export default function CVPage() {
         >
           <p>
             Your browser doesn&apos;t support embedded PDFs.{" "}
-            <a href="/Danielle_CV.pdf" download className="text-link">
+            <a href="/Danielle_CV_updated.pdf" download className="text-link">
               Download the CV
             </a>
             .
